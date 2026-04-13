@@ -1,0 +1,37 @@
+<!-- 
+Bài tập JavaScript 16: Minh hoạ việc gọi hàm khi người dùng click vào một nút
+
+Yêu cầu: Tạo ra 4 text có tên lần lượt là: MauNen, MauChu, TieuDe, TrangThai và một nút có tên là ThayDoi, value là "Thay đổi". 
+Khi người dùng click vào nút ThayDoi thì màu nền, màu chữ, tiêu đề của tài liệu và thanh trạng thái của cửa sổ trình duyệt sẽ được thay đổi bằng các giá trị trong text tương ứng
+
+Hướng dẫn: Bạn hoàn toàn có thể viết nhiều câu lệnh trong thuộc tính OnClick như các ví dụ trước, tuy nhiên nếu có nhiều lệnh thì chương trình trông không được sáng sủa cho lắm. 
+Khi đó bạn có thể nhóm các câu lệnh vào trong một hàm và trong thuộc tính OnClick bạn chỉ việc gọi hàm này ra. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay đổi thuộc tính trang Web</title>
+</head>
+<h1 style="text-align:center;">Nhập vào các giá trị và nhấn nút Thay đổi</h1>
+
+<body>
+    <input type="text" id="TieuDe" placeholder="Nhập tiêu đề trang"> <br>
+    <input type="text" id="MauNen" placeholder="Nhập màu nền"> <br>
+    <input type="text" id="MauChu" placeholder="Nhập màu chữ"> <br>
+    <input type="text" id="TrangThai" placeholder="Trạng thái"> <br>
+    <input type="button" id="ThayDoi" value="Thay đổi" onclick="CapNhat();">
+    <script>
+        function CapNhat() {
+            document.title = TieuDe.value;
+            document.bgColor = MauNen.value;
+            document.fgColor = MauChu.value;
+            window.status = TrangThai.value;
+            document.getElementById("TrangThai").value = "Đã thay đổi";
+        }   
+    </script>
+</body>
+
+</html>

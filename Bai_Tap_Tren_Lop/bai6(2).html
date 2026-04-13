@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính Tổng Các Số Trong Xâu</title>
+</head>
+
+<body>
+    Nhập vào 1 dãy số(Cách nhau bởi 1 dấu cách): <br>
+    <input type="text" name="" id="so1">
+    <button onclick="tinh()">Tính Tổng</button>
+    <h2 id="kq"></h2>
+    <script>
+        function tinh() {
+            const so = document.getElementById('so1').value;
+
+            document.getElementById('kq').innerText = "Tổng các số: " + sum;
+        }
+    </script>
+</body>
+
+</html>

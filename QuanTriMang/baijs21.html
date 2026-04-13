@@ -1,0 +1,29 @@
+<!-- 
+Bài tập JavaScript 21: Tạo một textarea có tên là NoiDung, một Textbox có tên là: SoKyTu. 
+Với yêu cầu như sau: Khi người sử dụng gõ các phím vào trong textarea thì số lượng ký tự (Độ dài xâu) chứa trong textarea đó sẽ được hiển thị trong textbox. 
+Nếu số lượng ký tự trong textarea gõ vào vượt quá 200 ký tự thì thông báo: "Bạn đã gõ quá số ký tự cho phép!". 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check số kí tự</title>
+</head>
+
+<body style="font-family: arial;">
+    <textarea id="NoiDung" rows="10" cols="50" onkeyup="KiemTra();"></textarea>
+    <label for="NoiDung">Số ký tự đã gõ:</label>
+    <input type="text" id="SoKyTu" readonly>
+    <script>
+        function KiemTra() {
+            if (NoiDung.value.length > 200) {
+                alert("Bạn đã gõ quá ký tự cho phép!");
+            }
+            SoKyTu.value = NoiDung.value.length;
+        }
+    </script>
+</body>
+
+</html>

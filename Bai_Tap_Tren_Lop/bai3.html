@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Nhập</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <h3 class="alert alert-success text-center">Form Đăng Nhập</h3>
+                <form action="">
+                    <div class="mb-3">
+                        <label for="user" class="form-label">Tài Khoản</label>
+                        <input type="text" class="form-control" id="user" name="username">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="pass" class="form-label">Mật Khẩu</label>
+                        <input type="password" class="form-control" id="pass" name="password">
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="remember">
+                        <label class="form-check-label" for="remember">Check me out</label>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address:</label>
+                        <select id="address" name="address" class="form-select">
+                            <option value="HN">Hà Nội</option>
+                            <option value="NB">Ninh Bình</option>
+                            <option value="TH">Thanh Hóa</option>
+                            <option value="PY">Phú Yên</option>
+                        </select>
+                    </div>
+
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+                        <button type="reset" class="btn btn-warning">Làm Lại</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

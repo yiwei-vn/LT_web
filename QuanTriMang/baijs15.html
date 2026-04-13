@@ -1,0 +1,40 @@
+<!-- 
+Bài tập JavaScript 15: Minh hoạ việc thay đổi giá trị của hộp textbox
+
+Yêu cầu: Tạo ra ba hộp text lần lượt tên là SoHang1, SoHang2, KetQua và một nút có tên là TinhTong, 
+để thực hiện phép tính tổng. Khi người dùng nhập hai số hạng vào hộp SoHang1 và SoHang2, sau đó click vào nút TinhTong thì kết quả tổng sẽ được lưu vào trong hộp text KetQua.
+
+Hướng dẫn: Để thay đổi giá trị một thuộc tính nào đó của phần tử HTML, bạn viết theo cách sau:
+<Tên của phần tử>.<Tên thuộc tính> = <Giá trị mới>
+Trong đó: Tên phần tử chính là giá trị của thuộc tính name khi bạn tạo thẻ. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tổng hai số hạng</title>
+</head>
+
+<body>
+    <h1>Tính tổng hai số hạng:</h1>
+    <h2>Hãy nhập hai số và click vào nút Tính tổng</h2>
+    <input type="text" id="SoHang1"> +
+    <input type="text" id="SoHang2"> =
+    <input type="text" id="KetQua">
+    <input type="button" value="Tính tổng" onclick="tinhTong()">
+
+    <script>
+        function tinhTong() {
+            let chuoi1 = document.getElementById("SoHang1").value;
+            let chuoi2 = document.getElementById("SoHang2").value;
+            let so1 = parseFloat(chuoi1);
+            let so2 = parseFloat(chuoi2);
+            let tong = so1 + so2;
+            document.getElementById("KetQua").value = tong;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!-- 
+Bài tập JavaScript 9: Tương tự như bài 3 nhưng năm sinh nhập vào không được lớn hơn năm hiện tại.
+
+Hướng dẫn: Sử dụng vòng lặp do…while để yêu cầu nhập lại nếu năm sinh > năm hiện tại. 
+-->
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tuổi có kiểm tra</title>
+</head>
+
+<body>
+    <script>
+        let D = new Date();
+        let NamSinh, NamHienTai;
+        NamHienTai = D.getFullYear();
+        do {
+            NamSinh = prompt("Bạn sinh năm bao nhiêu : ", "");
+        } while (parseInt(NamSinh) > NamHienTai);
+        alert("Tuổi của bạn bây giờ là : " + (NamHienTai - NamSinh));
+    </script>
+</body>
+
+</html>

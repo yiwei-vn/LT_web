@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3: Thẻ Select</title>
+</head>
+
+<body>
+
+    <select id="tinh">
+        <option value="angiang">An Giang</option>
+        <option value="bentre">Bến Tre</option>
+        <option value="cantho">Cần Thơ</option>
+        <option value="hcm" selected>Hồ Chí Minh</option>
+        <option value="soctrang">Sóc Trăng</option>
+        <option value="tayninh">Tây Ninh</option>
+    </select>
+
+    <button onclick="ct()">Xem Value</button>
+    <hr>
+
+    <button onclick="gantinh('cantho')">Chọn Cần Thơ</button>
+    <button onclick="gantinh('tayninh')">Chọn Tây Ninh</button>
+    <button onclick="gantinh('bentre')">Chọn Bến Tre</button>
+
+    <script>
+        // Hàm lấy giá trị (value) của select
+        function ct() {
+            let v = document.getElementById("tinh").value;
+            alert("Value đang chọn là: " + v);
+        }
+
+        // Hàm gán giá trị mới cho select
+        function gantinh(t) {
+            document.getElementById("tinh").value = t;
+        }
+    </script>
+
+</body>
+
+</html>

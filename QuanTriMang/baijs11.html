@@ -1,0 +1,34 @@
+<!-- 
+Bài tập JavaScript 11: Minh hoạ việc khai báo và sử dụng biến đối tượng Array để lưu trữ danh sách và cách sử dụng các hàm của đối tượng Array như hàm sort và vòng lặp for…in
+
+Yêu cầu: Cho người dùng nhập vào danh sách tên của một lớp, sau đó sắp xếp theo vần Alphabet rồi hiển thị danh sách đã sắp xếp đó ra màn hình, mỗi người trên một dòng.
+
+Hướng dẫn: Sử dụng vòng lặp for để cho phép nhập danh sách họ tên và Lưu danh sách vào một mảng, sau đó sử dụng phương thức sort của đối tượng mảng để sắp xếp, 
+tiếp theo dùng vòng lặp for…in để in các phần tử trong danh sách. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sắp xếp mảng</title>
+</head>
+
+<body>
+    <script>
+        let SoLuong = Number(prompt('Bạn cần nhập bao nhiêu người:')), x;
+        let ds = new Array(SoLuong);
+        for (i = 0; i < SoLuong; i++) {
+            ds[i] = prompt("Nhập vào họ tên:", " ");
+        }
+        ds.sort((a, b) => a.localeCompare(b, 'vi'));
+        document.write("<h1>Danh sách đã sắp xếp là:</h1>");
+        for (x in ds) {
+            document.write(ds[x]);
+            document.write("<br>");
+        }
+    </script>
+</body>
+
+</html>

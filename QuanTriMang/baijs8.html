@@ -1,0 +1,26 @@
+<!-- 
+ Bài tập JavaScript 8: Vận dụng biến đối tượng Date để tính tuổi của một người.
+
+Yêu cầu : Cho người dùng nhập vào năm sinh của họ, sau đó hiển thị tuổi tương ứng.
+
+Hướng dẫn: Sử dụng đối tượng Date để lấy năm hiện tại. Tuổi sẽ bằng năm hiện tại trừ đi năm sinh vừa nhập vào.
+ -->
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tuổi</title>
+</head>
+
+<body>
+    <script>
+        let D = new Date();
+        let NamSinh, NamHienTai;
+        NamHienTai = D.getFullYear();
+        NamSinh = prompt("Bạn sinh năm bao nhiêu ? : ", "");
+        alert("Tuổi của bạn bây giờ là : " + (NamHienTai - NamSinh));
+    </script>
+</body>
+
+</html>

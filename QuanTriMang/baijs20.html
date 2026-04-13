@@ -1,0 +1,32 @@
+<!-- 
+Bài tập JavaScript 20:
+
+Tạo một danh sách lựa chọn gồm có 4 màu: red, blue, brown và lavender. Khi người dùng chọn một màu thì màu nền của tài liệu sẽ thay đổi tương ứng. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đổi màu nền</title>
+</head>
+
+<body>
+    <label for="MauNen">Bạn hãy chọn màu nền:</label>
+    <select id="Mau" onchange="DoiMauNen();">
+        <option value="">Chọn màu nền</option>
+        <option value="black">Đen</option>
+        <option value="red">Đỏ</option>
+        <option value="blue">Xanh dương</option>
+        <option value="brown">Nâu</option>
+        <option value="lavender">Xanh nhạt</option>
+    </select>
+    <script>
+        function DoiMauNen() {
+            document.bgColor = Mau.value;
+        }
+    </script>
+</body>
+
+</html>

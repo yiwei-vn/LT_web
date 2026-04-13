@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính Tổng Các Số Trong Xâu</title>
+</head>
+
+<body>
+    Nhập vào 1 xâu có cả chữ và số: <br>
+    <input type="text" name="" id="so1">
+    <button onclick="tinh()">Tính Tổng Các Số</button>
+    <h2 id="kq"></h2>
+    Nhập vào 1 dãy số(Cách nhau bởi 1 dấu cách): <br>
+    <input type="text" name="" id="so2">
+    <button onclick="tinh2()">Tính Tổng Các Số</button>
+    <h2 id="kq2"></h2>
+    <script>
+        function hien() {
+            let d = new Date();
+            let st = d.getHours() + ":" + d.getMinutes() + ":" + d.getDate() + "-" + (d.getMonth() + 1) + "-" + d.getFullYear();
+        }
+        function tinh() {
+            const so = document.getElementById('so1').value;
+            let st = so.match(/\d/g);
+            let sum = 0;
+            for (let s of st) {
+                sum += Number(s);
+            }
+            let kq = document.getElementById('kq');
+            kq.innerText = "Tổng các số: " + sum;
+        }
+        function tinh2() {
+            const so = document.getElementById('so2').value;
+            const st = so.split(/\s+/);
+            let sum = 0;
+            for (let s of st) {
+                sum += Number(s);
+            }
+            let kq = document.getElementById('kq2');
+            kq.innerText = "Tổng các số: " + sum;
+        }
+    </script>
+</body>
+
+</html>
